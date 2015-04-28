@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'tweetpage/style.css' %}" />
+</head>
+<body>
+<div class="header"><h1>Politico<span style="color:red">Tweet</span></h1></div>
+
+<div class="results-box">
+	<h2>President</h2>
+	<img src="http://us.123rf.com/450wm/dervish37/dervish371302/dervish37130200075/18089974-on-the-image-the-politician-addressing-public-is-presented.jpg" /?>
+	<p style="color:blue; text-align:center;">Correct: {{ num_correct }}</p>
+	<p>You've proven yourself to be a true leader of the pack. Clearly, you're one
+	of the most politically-savvy folks in Washington and have made it all the way
+	to the top. Welcome to the white house!</p>
+	<a href="/tweetpage">Play again?</a>
+</div>
+
+<br>
+</body>
+</html>

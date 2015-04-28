@@ -1,0 +1,51 @@
+{% load staticfiles %}
+{% load shuffle %}
+<link rel="stylesheet" type="text/css" href="{% static 'tweetpage/style.css' %}" />
+<html>
+<head></head>
+<body>
+
+<div class="header"><h1>Politico<span style="color:red">Tweet</span></h1></div>
+
+
+<div>
+<!--delete references to name, hide extra content, link not clickable; if not, make a new twitter-tweet blockquote, add tweet.text in a <p>-->
+<blockquote class="twitter-tweet tw-align-center" lang="en" data-cards="hidden">
+<a href="https://twitter.com/{{ tweet.0.user.screen_name }}/status/{{ tweet.0.id}}"</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</a>
+</div>
+
+
+<div class="stats">
+<p>Guesses left: {{ guessstats.guesses_left }}&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCorrect: {{ guessstats.num_correct }}</p>
+</div>
+
+
+<div class="politician-container">
+{% for person in tweet|shuffle %}
+<div class="politician" onClick="test_match('{{ person.user.screen_name }}')"> <!--better to use DOM than div onClick?-->
+<div class="profilepic"><img src={{ person.user.profile_image_url }}></img></div>
+<p>{{ person.user.name }}<p>
+</div>
+{% endfor %}
+</div>
+
+<script>
+function test_match(name){
+	if(name === "{{ tweet.0.user.screen_name }}"){
+		alert("It's a match!");
+		window.location.assign("/tweetpage/{{ guessstats.guesses_left}}/{{ guessstats.num_correct}}/True/updateguesses/");
+	}
+	else{
+		alert("not a match!");
+		window.location.assign("/tweetpage/{{ guessstats.guesses_left}}/{{ guessstats.num_correct}}/False/updateguesses/");
+	}
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+html {
+background: linear-gradient(#005CB8, #164093);
+}
+
+h1 {
+font-family: "futura";
+text-align: center;
+color: white;
+font-size: 45px;
+text-shadow: 2px 2px #4D4D4D;
+display: inline-block;
+padding: 0 15px;
+position: relative;
+}
+
+h1:before{
+background: linear-gradient(to right, #4D4D4D, white);
+content: "";
+display: block;
+height: 3px;
+position: absolute;
+top: 50%;
+width: 200%;
+right: 100%;
+}
+
+h1:after{
+background: linear-gradient(to left, #4D4D4D, white);
+content: "";
+display: block;
+height: 3px;
+position: absolute;
+top: 50%;
+width: 200%;
+left: 100%;
+}
+
+h2{
+font-family: "futura";
+font-size:30px;
+text-align: center;
+}
+
+.header {
+  overflow: hidden;
+  text-align: center;
+}
+
+.stats p {
+color: white;
+font-family: "futura";
+
+}
+
+.stats {
+border: 1px solid;
+border-radius: 4px;
+color: white;
+padding: 5px;
+margin: 0 auto;
+width: 225px;
+}
+
+.politician-container {
+text-align:center;
+}
+
+img {
+border:1px solid #;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.politician {
+position:relative;
+display: inline-block;
+font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 16px;
+border-color: #eee #ddd #bbb;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+margin: 50px 25px;
+padding: 16px 16px 16px 16px;
+width: 130px;
+background-color: white;
+}
+
+.politician:hover {
+border-color: red;
+border-width: 3px;
+padding: 14px;
+}
+
+.profilepic {
+position:relative;
+border-radius:4px;
+margin:0 auto;
+display:inline-block;
+}
+
+blockquote.twitter-tweet,  {
+display: inline-block;
+font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 16px;
+border-color: #eee #ddd #bbb;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+margin: 10px 5px;
+padding: 0 16px 16px 16px;
+max-width: 468px;
+}
+
+blockquote.twitter-tweet p {
+font-size: 16px;
+font-weight: normal;
+line-height: 20px;
+}
+
+blockquote.twitter-tweet a {
+color: inherit;
+font-weight: normal;
+text-decoration: none;
+outline: 0 none;
+pointer-events: none;
+cursor:default;
+}
+
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+text-decoration: underline;
+}
+
+.results-box {
+position:relative;
+font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 16px;
+border-color: #eee #ddd #bbb;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+margin: 50px 25px;
+padding: 16px 16px 16px 16px;
+width: 450px;
+background-color: white;
+margin: 0 auto;
+}
+
+.results-box p {
+color: black;
+font-size: 18px;
+font-family: "futura";
+line-height: 150%;
+}
+
+.results-box a {
+display:block;
+text-decoration:none;
+color: #4D4D4D;
+text-align: center;
+color: red;
+font-size: 18px;
+font-family: "futura";
+}
+
+.results-box img {
+display: block;
+margin: auto;
+height: 180px;
+width: 150px;
+}
