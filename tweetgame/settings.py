@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'tweetgame.wsgi.application'
 
 

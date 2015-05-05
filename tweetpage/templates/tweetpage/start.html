@@ -1,19 +1,22 @@
+{% extends 'tweetpage/base.html' %}
 {% load staticfiles %}
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="{% static 'tweetpage/style.css' %}" />
-</head>
-<body>
-<div class="header"><h1>Politico<span style="color:red">Tweet</span></h1></div>
 
+
+{% block head_extend %}
+<head>
+	<script type="text/javascript" src="{% static 'tweetpage/start.js' %}"></script>
+</head>
+{% endblock %}
+
+
+{% block content %}
 <div class="results-box">
-	<img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-512.png" /?>
+	<a href="guess/"><img src="{% static '/static/tweetpage/images/twitter_circle.png' %}" /></a>
 	<p>Are all politicians the same? Do they all tout the same, tired rhetoric? 
 	Prove your political savvy by matching the tweet to the politician who wrote it. 
 	Careful, though! Get three wrong and it's game over for your political career.</p>
-	<a href="/tweetpage">Let's play!</a>
+<!--	<input type="submit" id="myButton" value="Let's Play!" onClick="store_cache();"></input>-->
+	<a href="guess/">Let's play!</a>
 </div>
+{% endblock content %}
 
-<br>
-</body>
-</html>
